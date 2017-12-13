@@ -35,5 +35,5 @@ Route::group(['prefix' => 'pro'], function() {
 
     Route::get('/', 'ProductController@getAllProduct')->name('all');
 
-    Route::get('/pro/detail/{id}', 'ProductController@detail')->name('detail');
+    Route::get('/detail/{id}', 'ProductController@detail')->name('detail');
 });

@@ -19,6 +19,7 @@
             margin-bottom: 10px;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="http://www.tinymce.com/css/codepen.min.css">
 @endsection
 @section('content')
     <div class="container">
@@ -50,10 +51,10 @@
                     </div>
                     <div class="form-group col-md-12">
                         <div class="col-md-2">
-                            <label>Danh Mục: </label>
+                            <label>Mo ta: </label>
                         </div>
                         <div class="col-md-8">
-                            <textarea class="form-control" name="description" style="resize: none" cols="8" rows="8"></textarea>
+                            <textarea class="form-control" name="description"></textarea>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -76,6 +77,16 @@
 @endsection
 
 @section('script')
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=eoyxla08gew2itcni08oexsea1sdp5w0p8mtiys5am2n79do"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            height: 200,
+            theme: 'modern',
+            toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+            image_advtab: true,
+        });
+    </script>
     <script type="text/javascript">
         function loadFile(event, id) {
             var files = event.target.files;

@@ -44,4 +44,14 @@ class ProductService
                             ->get();
         return $product;
     }
+
+    public function getProById($id)
+    {
+        $product = Product::join('category_products', 'category_products.id', '=', 'products.cat_id')
+                            ->select('products.id', 'title', 'thumbnail', 'description', 'category_products.name')
+                            ->with('imageProducts')
+                            ->where('products.id', $id)
+                            ->first();
+        return $product;
+    }
 }

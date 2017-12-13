@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Services\ProductService;
+use Log;
 
 class ProductController extends Controller
 {
@@ -31,6 +32,8 @@ class ProductController extends Controller
 
     public function detail($id)
     {
-        return;
+        $product = $this->productService->getProById($id);
+
+        return view('layouts.detail', ['product' => $product]);
     }
 }
