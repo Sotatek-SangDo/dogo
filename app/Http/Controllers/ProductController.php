@@ -36,4 +36,10 @@ class ProductController extends Controller
 
         return view('layouts.detail', ['product' => $product]);
     }
+
+    public function search(Request $request)
+    {
+        $products = $this->productService->productSearch($request);
+        return view('layouts.search', ['products' => $products, 'search' => $request['search']]);
+    }
 }

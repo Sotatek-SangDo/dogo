@@ -18,6 +18,9 @@
         div.col-md-12 {
             margin-bottom: 10px;
         }
+        span#mceu_30 {
+            display: none;
+        }
     </style>
     <link rel="stylesheet" type="text/css" href="http://www.tinymce.com/css/codepen.min.css">
 @endsection

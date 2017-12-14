@@ -67,8 +67,9 @@
                         </li>
                     </ul>
                     <div class="search">
-                        <form>
-                            <input type="text" value="" placeholder="Search...">
+                        <form action="{{ route('search') }}" method="POST">
+                            {{ csrf_field() }}
+                            <input type="text" name="search" placeholder="Search...">
                             <input type="submit" value="">
                         </form>
                     </div>
